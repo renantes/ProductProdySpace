@@ -13,9 +13,9 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 
 # Load the data
-node_positions_df = pd.read_csv('/OEC_network_hs4_positions.csv')
-edges_df = pd.read_csv('/OEC_network_hs4_edges.csv')
-dictHS_data = pd.read_csv('/dictHS.csv')
+node_positions_df = pd.read_csv('OEC_network_hs4_positions.csv')
+edges_df = pd.read_csv('OEC_network_hs4_edges.csv')
+dictHS_data = pd.read_csv('dictHS.csv')
 
 # Define the section colors
 section_colors = {
@@ -46,7 +46,7 @@ section_colors = {
 periods = [0, 1, 2, 3, 4]
 complexity_prody_data = {}
 for period in periods:
-    file_name = f'/complexity_prody_data_{period}.csv'
+    file_name = f'complexity_prody_data_{period}.csv'
     complexity_prody_data[period] = pd.read_csv(file_name)
 
 # Initialize the Dash app
